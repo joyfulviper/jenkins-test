@@ -13,7 +13,7 @@ pipeline {
                 sh 'sudo cp build/libs/demo-0.0.1-SNAPSHOT.jar /home/ec2-user/app/step'
                 sh 'sudo cd /home/ec2-user/app/step'
                 echo "Deploy new application"
-                sh 'ls'
+                sh 'sudo chmod +x /home/ec2-user/app/step/build.sh'
                 sh 'sudo /home/ec2-user/app/step/build.sh'
             }
         }
