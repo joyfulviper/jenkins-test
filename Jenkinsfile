@@ -14,8 +14,7 @@ pipeline {
                 sh 'sudo cd /home/ec2-user/app/step'
                 echo "Deploy new application"
                 sh 'ls'
-                sh 'chmod +x ./build.sh'
-                sh './build.sh'
+                sh '/home/ec2-user/app/step/build.sh'
             }
         }
     }
