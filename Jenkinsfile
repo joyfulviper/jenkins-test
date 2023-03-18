@@ -9,6 +9,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
+                sh 'sudo chmod u+w /home/ec2-user/app/step'
                 sh 'cp build/libs/demo-0.0.1-SNAPSHOT.jar /home/ec2-user/app/step'
                 sh 'cd /home/app/step'
                 echo "Deploy new application"
