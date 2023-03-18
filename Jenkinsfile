@@ -14,7 +14,7 @@ pipeline {
                 sh 'sudo cd /home/ec2-user/app/step'
                 echo "Deploy new application"
                 sh 'ls'
-                sh '/home/ec2-user/app/step/build.sh'
+                sh 'sudo /home/ec2-user/app/step/build.sh'
             }
         }
     }
