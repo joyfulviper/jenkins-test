@@ -14,6 +14,7 @@ pipeline {
                 echo "Deploy new application"
                 sh 'sudo chmod +x /home/ec2-user/app/step/build.sh'
                 sh 'cd ..'
+                sh 'ls'
                 sh 'sudo chmod u+w nohup.out'
                 sh 'sudo /home/ec2-user/app/step/build.sh'
             }
